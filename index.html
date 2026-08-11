@@ -3,14 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
 <title>Course Assignments</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f7f8fa;
+    color: #1a1a1a;
+  }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  .page-header h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .page-header p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #5b6270;
+    max-width: 560px;
+  }
+
+  .cards {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #e7e9ee;
+    border-radius: 10px;
+    padding: 28px 28px 24px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  }
+
+  .card h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #5b6270;
+    margin-bottom: 20px;
+  }
+
+  .card hr {
+    border: none;
+    border-top: 1px solid #edeef2;
+    margin-bottom: 20px;
+  }
+
+  .view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    background: #ffffff;
+    border: 1px solid #d7dae0;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  .view-btn:hover {
+    background: #f4f5f7;
+    border-color: #c3c7cf;
+  }
+
+  .view-btn svg {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.15s ease;
+  }
+
+  .view-btn:hover svg {
+    transform: translateX(2px);
+  }
+</style>
 </head>
 <body>
 
-  <div class="container">
+<div class="page">
+  <header class="page-header">
     <h1>Course Assignments</h1>
+  </header>
+
+  <div class="cards">
     <div class="card">
       <h2>Misr Travels</h2>
       <p>Simple travel website designed to help users explore destinations, discover travel packages, and plan their next trip. The page provides an easy-to-use layout with clear navigation and attractive travel content.</p>
@@ -27,6 +127,7 @@
       </a>
     </div>
   </div>
+</div>
 
 </body>
 </html>
