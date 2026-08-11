@@ -1,0 +1,592 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* =========================================================
+   DOCTOR APPOINTMENT PAGE
+   ORIGINAL DESIGN — COLORS UNCHANGED
+========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+.page {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 60px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+/* ---- Doctor image ---- */
+
+.doctor-image {
+    flex: 0 0 38vw;
+    width: 38vw;
+    max-width: 800px;
+}
+
+.doctor-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ---- Form section ---- */
+
+.form-wrapper {
+    flex: 1;
+    padding-left: 6vw;
+    padding-top: 8vh;
+    max-width: 900px;
+}
+
+.form-wrapper h1 {
+    font-size: clamp(28px, 2.4vw, 42px);
+    font-weight: 700;
+    margin: 0 0 14px 0;
+    line-height: 1.1;
+}
+
+.divider {
+    border: none;
+    border-top: 3px solid #e11d1d;
+    width: 100%;
+    max-width: 660px;
+    margin: 0 0 36px 0;
+}
+
+
+/* ---- Form ---- */
+
+form {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0 26px;
+    width: 100%;
+}
+
+.form-row {
+    display: table-row;
+}
+
+.form-row .row-label {
+    display: table-cell;
+    width: 160px;
+    padding-right: 24px;
+    font-size: clamp(16px, 1.3vw, 22px);
+    color: #1a1a1a;
+    vertical-align: top;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.form-row .row-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* ---- Inputs ---- */
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+input[type="tel"] {
+    font-size: 1.05vw;
+    padding: 10px 14px;
+    border: 1px solid #2b2b2b;
+    border-radius: 2px;
+    font-family: inherit;
+    color: #6b6b6b;
+    height: 44px;
+    background: #fff;
+}
+
+input::placeholder {
+    color: #8a8a8a;
+}
+
+#appt-date {
+    width: 260px;
+}
+
+#appt-time {
+    width: 260px;
+}
+
+.name-fields,
+.address-fields {
+    display: flex;
+    gap: 30px;
+}
+
+.name-fields input,
+.address-fields input {
+    width: 260px;
+}
+
+#phone {
+    width: 260px;
+}
+
+
+/* ---- Gender ---- */
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    font-size: 1.1vw;
+    height: 44px;
+}
+
+.gender-options input[type="radio"] {
+    width: 17px;
+    height: 17px;
+    margin: 0 4px 0 0;
+}
+
+.gender-options label {
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+
+/* ---- Query ---- */
+
+#query {
+    width: 100%;
+    max-width: 460px;
+    height: 100px;
+    resize: vertical;
+    border: 1px solid #2b2b2b;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 1.05vw;
+    padding: 10px 14px;
+}
+
+
+/* ---- Appointment type ---- */
+
+.appointment-type-heading {
+    font-size: 1vw;
+    color: #1a1a1a;
+    display: block;
+    margin-bottom: 12px;
+    white-space: nowrap;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.1vw;
+}
+
+.checkbox-list label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-list input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #1a56db;
+    margin: 0;
+}
+
+
+/* ---- Send button ---- */
+
+#send-btn {
+    background: #ececec;
+    border: 1px solid #2b2b2b;
+    padding: 12px 42px;
+    font-size: 1.05vw;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #1a1a1a;
+    font-family: inherit;
+}
+
+#send-btn:hover {
+    background: #dcdcdc;
+}
+
+.send-row .row-content {
+    padding-top: 8px;
+}
+
+
+/* =========================================================
+   MISR TRAVELS
+   COMPLETELY SEPARATE THEME
+========================================================= */
+
+.travels-page {
+    --bg: #101b30;
+    --card-bg: #4a63a0;
+    --border: #5c73ad;
+    --text-dark: #e0a15c;
+    --text-body: #d4dced;
+    --link: #e0a15c;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: var(--bg);
+    color: var(--text-body);
+
+    font-family: "Courier New", Courier, monospace;
+
+    padding: 45px 40px 60px;
+}
+
+
+/* ---- Misr Travels header ---- */
+
+.travels-page .travels-header {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.travels-page .travels-header h1 {
+    color: var(--text-dark);
+
+    font-size: 36px;
+    font-weight: 800;
+
+    margin: 0 0 18px;
+
+    letter-spacing: 3px;
+}
+
+.travels-page .travels-header .subtitle {
+    font-size: 16px;
+    color: #9fb0cc;
+    margin: 0;
+}
+
+
+/* =========================================================
+   MISR TRAVELS CARDS
+========================================================= */
+
+.travels-page .places-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* ---- Individual place ---- */
+
+.travels-page .place-card {
+    display: flex;
+
+    width: 100%;
+    height: 260px;
+
+    background-color: var(--card-bg);
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ---- Card animation ---- */
+
+.travels-page .place-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ---- Text ---- */
+
+.travels-page .place-text {
+    flex: 1.2;
+
+    padding: 22px;
+
+    color: #000;
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.travels-page .place-text p {
+    margin: 0;
+}
+
+.travels-page .place-text .price {
+    margin-top: 10px;
+}
+
+
+/* ---- Image ---- */
+
+.travels-page .place-image {
+    flex: 1;
+
+    min-width: 0;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.travels-page .place-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* ---- Image animation ---- */
+
+.travels-page .place-card:hover .place-image img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   MISR TRAVELS ALTERNATIVE GRID
+   For your .grid / .text-block / .img-block HTML
+========================================================= */
+
+.travels-page .grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr 1fr 1.3fr;
+
+    gap: 12px;
+}
+
+.travels-page .text-block {
+    background: var(--card-bg);
+
+    color: var(--text-body);
+
+    padding: 20px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 300px;
+
+    border-radius: 8px;
+}
+
+.travels-page .text-block p {
+    margin: 0;
+}
+
+.travels-page .img-block {
+    background: var(--card-bg);
+
+    overflow: hidden;
+
+    min-height: 300px;
+
+    border-radius: 8px;
+}
+
+.travels-page .img-block img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   MISR TRAVELS BUTTONS / CARDS
+========================================================= */
+
+.travels-page .card {
+    background: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow);
+
+    padding: 28px 32px 24px;
+
+    margin-bottom: 24px;
+}
+
+.travels-page .card h2 {
+    font-size: 20px;
+    font-weight: 700;
+
+    margin: 0 0 12px;
+
+    color: var(--text-dark);
+}
+
+.travels-page .card p {
+    font-size: 15px;
+    line-height: 1.65;
+
+    color: var(--text-body);
+
+    margin: 0 0 20px;
+}
+
+.travels-page hr {
+    border: none;
+
+    border-top: 1px solid var(--border);
+
+    margin: 0 0 20px;
+}
+
+.travels-page .btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--link);
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    padding: 9px 16px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.travels-page .btn:hover {
+    background: #3d5590;
+
+    border-color: #7085b8;
+}
+
+.travels-page .btn svg {
+    width: 14px;
+    height: 14px;
+
+    transition: transform 0.15s ease;
+}
+
+.travels-page .btn:hover svg {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .travels-page .places-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .travels-page .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .travels-page {
+        padding: 35px 20px 50px;
+    }
+
+    .travels-page .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travels-page .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travels-page .text-block,
+    .travels-page .img-block {
+        min-height: 220px;
+    }
+
+    .travels-page .card {
+        padding: 24px;
+    }
+
+    .travels-page .travels-header h1 {
+        font-size: 28px;
+    }
+}
